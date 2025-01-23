@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const HeroSection = () => {
@@ -10,12 +11,12 @@ const HeroSection = () => {
         <p className="text-lg mb-6">
          The best service delivery platform
         </p>
-        <a
-          href="#explore"
+        <Link
+          href="/pages/servidores"
           className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300"
         >
           Find out more
-        </a>
+        </Link>
       </div>
     </section>
   )

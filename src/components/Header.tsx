@@ -22,10 +22,10 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="/pages/servidores"
                 className="hover:text-yellow-300 transition duration-300"
               >
-                Início
+                Servidores
               </Link>
             </li>
             <li>

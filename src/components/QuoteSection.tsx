@@ -35,7 +35,7 @@ const QuoteSection = () => {
             <select className="border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
               <option>Select Service</option>
               <option>Installation</option>
-              <option>Repair</option>
+              <option>Repairjdjk</option>
               <option>Consultation</option>
             </select>
             {/* Botão */}
@@ -50,13 +50,13 @@ const QuoteSection = () => {
         {/* Por que somos os melhores */}
         <div className="w-full lg:w-1/3 flex flex-col items-center">
           <Image
-                          src="/assets/trabalhador.webp"
-                          alt="Service 1"
-                          className="w-full h-40 object-cover"
-                          width={300}
-                          height={300}
-                          quality={100}
-                        />
+            src="/assets/servico2.webp"
+            alt="Service 1"
+            className="w-full h-40 object-cover"
+            width={300}
+            height={300}
+            quality={100}
+          />
           <div className="bg-yellow-500 text-black p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Why We Are Best</h3>
             <ul className="space-y-4">

@@ -42,7 +42,7 @@ const SolutionsSection = () => {
           {/* Card 2 */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <Image
-                src="/assets/trabalhador.webp"
+                src="/assets/pedreiro.jpg"
                 alt="Service 1"
                 className="w-full h-40 object-cover"
                 width={300}
@@ -62,7 +62,7 @@ const SolutionsSection = () => {
           {/* Card 3 */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <Image
-                src="/assets/trabalhador.webp"
+                src="/assets/encanador.jpg"
                 alt="Service 1"
                 className="w-full h-40 object-cover"
                 width={300}
@@ -82,7 +82,7 @@ const SolutionsSection = () => {
           {/* Card 4 */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <Image
-                src="/assets/trabalhador.webp"
+                src="/assets/diarista.jpg"
                 alt="Service 1"
                 className="w-full h-40 object-cover"
                 width={300}

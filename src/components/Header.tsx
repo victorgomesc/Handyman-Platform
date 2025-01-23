@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Header = () => {
@@ -9,6 +10,14 @@ const Header = () => {
         {/* Menu */}
         <nav>
           <ul className="flex space-x-6">
+          <li>
+              <Link
+                href="/pages/signup"
+                className="hover:text-yellow-300 transition duration-300"
+              >
+                Cadastre-se
+              </Link>
+            </li>
             <li>
               <a
                 href="#"

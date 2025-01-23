@@ -6,7 +6,9 @@ const Header = () => {
     <header className="bg-yellow-400 text-black py-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
+        <Link href="/">
         <h1 className="text-2xl font-bold">Handyman</h1>
+        </Link>
         {/* Menu */}
         <nav>
           <ul className="flex space-x-6">
@@ -19,28 +21,28 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="hover:text-yellow-300 transition duration-300"
               >
                 Início
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="hover:text-yellow-300 transition duration-300"
               >
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="hover:text-yellow-300 transition duration-300"
               >
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

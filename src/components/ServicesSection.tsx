@@ -9,7 +9,7 @@ import { MdDesignServices } from "react-icons/md";
 const ServicesSection = () => {
   return (
     <section className="py-12 flex items-center justify-center px-6 bg-gray-50">
-      <div className="container mx-auto w-[80vw] grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="container mx-auto w-[80vw] grid grid-cols-2 md:grid-cols-2 gap-8">
         {/* Coluna da Esquerda */}
         <div className="flex flex-col items-center justify-center">
             <div className="items-center justify-start">
@@ -24,10 +24,11 @@ const ServicesSection = () => {
             </div>
           
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
             {/* Bloco de Serviço */}
+            <div className="flex gap-10">
             <div className="flex flex-col gap-y-6">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="bg-white shadow-lg w-52 rounded-lg overflow-hidden">
               <Image
                 src="/assets/trabalhador.webp"
                 alt="Service 1"
@@ -42,10 +43,27 @@ const ServicesSection = () => {
               </div>
             </div>
 
-            {/* Bloco de Serviço */}
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+              <Image
+                src="/assets/pedreiro.jpg"
+                alt="Service 1"
+                className="w-full h-40 object-cover"
+                width={300}
+                height={300}
+                quality={100}
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">540+</h3>
+                <p className="text-gray-600">Satisfied Customers</p>
+              </div>
+            </div>
+            </div>
+
+            {/* Bloco de Serviço */}
+            <div className="flex flex-col gap-y-6">
+            <div className="bg-white shadow-lg w-52 rounded-lg overflow-hidden">
             <Image
-                src="/assets/trabalhador.webp"
+                src="/assets/encanador.jpg"
                 alt="Service 1"
                 className="w-full h-40 object-cover"
                 width={300}
@@ -61,7 +79,7 @@ const ServicesSection = () => {
             {/* Bloco de Serviço */}
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <Image
-                src="/assets/trabalhador.webp"
+                src="/assets/diarista.jpg"
                 alt="Service 1"
                 className="w-full h-40 object-cover"
                 width={300}
@@ -72,6 +90,7 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-bold text-gray-800 mb-2">180+</h3>
                 <p className="text-gray-600">Professional Technicians</p>
               </div>
+            </div>
             </div>
             </div>
           </div>

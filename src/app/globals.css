@@ -1,5 +1,8 @@
+/* eslint-disable-next-line @tailwindcss(unknownAtRules) */
 @tailwind base;
+/* eslint-disable-next-line @tailwindcss(unknownAtRules) */
 @tailwind components;
+/* eslint-disable-next-line @tailwindcss(unknownAtRules) */
 @tailwind utilities;
 
 :root {

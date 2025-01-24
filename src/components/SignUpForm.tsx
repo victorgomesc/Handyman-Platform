@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const CadastroForm = () => {
-  const [formType, setFormType] = useState(null); // Define qual formulário exibir
+  const [formType, setFormType] = useState("client | servidor"); // Define qual formulário exibir
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">

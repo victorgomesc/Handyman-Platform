@@ -1,9 +1,39 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
 const CadastroForm = () => {
-  const [formType, setFormType] = useState("client | servidor"); // Define qual formulário exibir
+  const [formType, setFormType] = useState("servidor"); // Define qual formulário exibir
+  const [uploadedImageUrl, setUploadedImageUrl] = useState(""); // Para armazenar a URL da imagem após upload
+
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const data = new FormData();
+    data.append("file", file);
+    data.append("upload_preset", "Servidores"); // Substitua pelo seu upload preset
+    data.append("cloud_name", "dutpev6fe"); // Substitua pelo seu nome no Cloudinary
+
+    try {
+      const res = await fetch("https://api.cloudinary.com/v1_1/dutpev6fe/image/upload", {
+        method: "POST",
+        body: data,
+      });
+
+      const response = await res.json();
+      if (response.url) {
+        setUploadedImageUrl(response.url); // Atualiza o estado com a URL da imagem
+        alert("Imagem enviada com sucesso!");
+      } else {
+        alert("Erro ao enviar imagem. Verifique os dados configurados.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar imagem:", error);
+      alert("Erro ao enviar imagem. Tente novamente.");
+    }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
@@ -117,18 +147,40 @@ const CadastroForm = () => {
               type="password"
               id="senha"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Sua senha deve ter 6 digitos"
+              placeholder="Sua senha deve ter 6 dígitos"
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-medium mb-2" htmlFor="proficao">Profição</label>
-            <select id="proficao"  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <label className="block text-gray-700 font-medium mb-2" htmlFor="proficao">Profissão</label>
+            <select 
+              id="proficao"  
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
               <option>Eletricista</option>
               <option>Pedreiro</option>
               <option>Encanador</option>
               <option>Diarista</option>
             </select>
           </div>
+          <label className="block text-gray-700 font-medium mb-2" htmlFor="proficao">Escolha uma imagem para seu perfil</label>
+          <input 
+            type="file" 
+            onChange={handleFileUpload}
+            className="w-full mb-4 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" 
+          />
+          {uploadedImageUrl && (
+            <div className="mt-4">
+              <p className="text-gray-700">Imagem enviada com sucesso!</p>
+              <a 
+                href={uploadedImageUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 underline"
+              >
+                Visualizar imagem
+              </a>
+            </div>
+          )}
           <button
             type="submit"
             className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600"

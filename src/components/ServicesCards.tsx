@@ -18,7 +18,7 @@ const servidores = [
 const ServidoresPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedServidor, setSelectedServidor] = useState(null);
-  const [formData, setFormData] = useState({ nome: "", email: "" });
+  const [formData, setFormData] = useState({ nome: "", email: "", address: "" });
 
   // Filtrar servidores com base no cargo pesquisado
   const filteredServidores = servidores.filter((servidor) =>
@@ -31,7 +31,7 @@ const ServidoresPage = () => {
 
   const handleCloseModal = () => {
     setSelectedServidor(null);
-    setFormData({ nome: "", email: "" });
+    setFormData({ nome: "", email: "", address: "" });
   };
 
   const handleFormChange = (e) => {
@@ -115,6 +115,20 @@ const ServidoresPage = () => {
                   id="email"
                   name="email"
                   value={formData.email}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 font-medium mb-2" htmlFor="address">
+                  Seu Endereço
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  value={formData.address}
                   onChange={handleFormChange}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
